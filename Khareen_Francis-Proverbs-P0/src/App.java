@@ -1,4 +1,4 @@
-import com.revature.Employee;
+import main.java.com.revature.Employee;
 
 public class App {
 
