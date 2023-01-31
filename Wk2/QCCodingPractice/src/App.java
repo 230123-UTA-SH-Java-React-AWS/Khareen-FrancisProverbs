@@ -2,11 +2,11 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Queue;
-
 import solution.Solution;
 
 public class App {
-    /*
+
+  /*
         Given an array of integers ex {1,2,3,4,5,6}
 
         output an array of boolean with the same length
@@ -18,27 +18,33 @@ public class App {
         Output = {F, T, F, T, F, T}
     */
 
-    public static boolean[] determineEveryOddorEven(int nums[])
-    {
-        return null;
+  public static boolean[] determineEveryOddorEven(int nums[]) {
+    boolean output[] = new boolean[nums.length];
+
+    for (int i = 0; i < nums.length; i++) {
+      if (nums[i] % 2 == 0) {
+        output[i] = true;
+      } else {
+        output[i] = false;
+      }
     }
+    return output;
+  }
 
-    public static void main(String[] args) throws Exception {
-        Queue<int[]> que = new ArrayDeque<>();
+  public static void main(String[] args) throws Exception {
+    Queue<int[]> que = new ArrayDeque<>();
 
-        que.add(new int[] {1, 2, 3, 4, 5, 6});
+    que.add(new int[] { 1, 2, 3, 4, 5, 6 });
 
-        for (int[] nums : que) {
-            String expected = Arrays.toString(Solution.determineEveryOddorEven(nums));
-            String actual = Arrays.toString(determineEveryOddorEven(nums));
+    for (int[] nums : que) {
+      String expected = Arrays.toString(Solution.determineEveryOddorEven(nums));
+      String actual = Arrays.toString(determineEveryOddorEven(nums));
 
-            if (expected.equals(actual)) {
-                System.out.println("Pass");
-            }
-            else 
-            {
-                System.out.println("Fail");
-            }
-        }
+      if (expected.equals(actual)) {
+        System.out.println("Pass");
+      } else {
+        System.out.println("Fail");
+      }
     }
+  }
 }
