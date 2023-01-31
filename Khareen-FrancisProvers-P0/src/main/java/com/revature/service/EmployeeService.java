@@ -7,8 +7,7 @@ import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
-/*
-    The service layer is responsible for hold behavior driven classes
+    /*The service layer is responsible for hold behavior driven classes
     It might have further validation or information process within the service
 */
 public class EmployeeService {

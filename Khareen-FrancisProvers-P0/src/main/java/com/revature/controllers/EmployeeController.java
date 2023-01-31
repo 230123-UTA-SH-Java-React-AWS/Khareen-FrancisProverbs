@@ -1,5 +1,6 @@
 package com.revature.controllers;
 
+import com.revature.service.EmployeeService;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import java.io.*;
@@ -56,6 +57,10 @@ public class EmployeeController implements HttpHandler {
     System.out.println(textBuilder.toString());
 
     exchange.sendResponseHeaders(200, textBuilder.toString().getBytes().length);
+
+    EmployeeService newEmployee = new EmployeeService();
+
+    newEmployee.save(textBuilder.toString());
 
     OutputStream os = exchange.getResponseBody();
     os.write(textBuilder.toString().getBytes());
