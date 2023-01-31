@@ -19,7 +19,7 @@ public class Employee {
   private String password;
 
   //What data structure allows us to add multiple things
-  private List<Ability> abilities;
+  //private List<Ability> abilities;
 
   public Employee() {
     // this.abilities = new ArrayList<>();
