@@ -1,4 +1,4 @@
-package com.reavture.controllers;
+package com.revature.controllers;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
