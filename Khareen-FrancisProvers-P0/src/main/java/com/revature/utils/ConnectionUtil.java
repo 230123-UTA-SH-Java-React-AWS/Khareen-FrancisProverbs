@@ -33,6 +33,12 @@ public class ConnectionUtil {
         //url = "localhost";
         //user = "postgressql";
         //pass = "password";
+
+        //Good idea it will be exposed once we push this to the remote repo
+        //System.getenv() method will check your System variables and will find a key exactly like what you specified in the parameter
+        url = System.getenv("url");
+        user = System.getenv("user");
+        pass = System.getenv("pass");
         return null;
     }
 }
