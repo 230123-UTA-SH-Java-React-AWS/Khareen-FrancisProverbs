@@ -1,8 +1,5 @@
 package com.revature.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /*
     Model layer is responsible for hold stateful objects
     objects that have information that differs from another object from the same class
@@ -11,12 +8,12 @@ import java.util.List;
 public class Employee {
 
   //Uniquely identifiable field that is numeric
-  private int employeeID;
+  private int empID;
 
   //Fields that will be useful to uniquely identify this object
-  private String name;
+  private String empName;
   private String email;
-  private String password;
+  private String passwd;
 
   //What data structure allows us to add multiple things
   //private List<Ability> abilities;
@@ -27,19 +24,19 @@ public class Employee {
 
   //right click, click source action, click generate getters and setters, select all fields, hit ok
   public int getemployeeID() {
-    return employeeID;
+    return empID;
   }
 
   public void setemployeeID(int employeeID) {
-    this.employeeID = employeeID;
+    this.empID = employeeID;
   }
 
-  public String getName() {
-    return name;
+  public String getEmpName() {
+    return empName;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setEmpName(String empName) {
+    this.empName = empName;
   }
 
   public String getEmail() {
@@ -50,12 +47,12 @@ public class Employee {
     this.email = email;
   }
 
-  public String getPassword() {
-    return password;
+  public String getPasswd() {
+    return passwd;
   }
 
-  public void setPassword(String password) {
-    this.password = password;
+  public void setPasswd(String passwd) {
+    this.passwd = passwd;
   }
   //     public List<Ability> getAbilities() {
   //         return abilities;

@@ -2,6 +2,7 @@ package com.revature.utils;
 
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
 //This class is responsible for connecting to our database
@@ -39,6 +40,15 @@ public class ConnectionUtil {
         url = System.getenv("url");
         user = System.getenv("user");
         pass = System.getenv("pass");
+
+        try {
+            con = DriverManager.getConnection(url,user,pass);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("YOU PROBABLY GAVE THE WRONG PASSWORD OR URL");
+        }
         return null;
     }
 }
+
+// Figure out how to set env variables to establish connection

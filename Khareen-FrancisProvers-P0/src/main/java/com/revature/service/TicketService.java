@@ -1,2 +1,4 @@
-package com.revature.service;public class TicketService {
+package com.revature.service;
+
+public class TicketService {
 }
