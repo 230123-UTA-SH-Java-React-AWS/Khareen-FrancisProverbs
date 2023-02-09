@@ -1,0 +1,229 @@
+<!DOCTYPE html> <!-- This declares that this file will be an HTML doc -->
+<html lang="en"> 
+
+<!-- head element contains all the metadata information that this html file will depend/config your browser to display -->
+<!-- You need the head tag to refer to the head element -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <!-- This is an example of internal css -->
+    <!-- You want to add multiple styling to multiple HTML elements within the same HTML document (file) -->
+    <!-- Style element will dictate that everything inside of this element will be CSS -->
+    <style>
+        /* This is a comment in css */
+
+        /* 
+            This is an example of id selector
+            But great for applying css for single html elements
+        */
+        #add-red {
+            color: red;
+            font-size: large;
+        }
+
+        /*
+            This is an example of class selector
+            great for selecting multiple HTML elements with differing HTML tags
+        */
+        .add-blue {
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* 
+            This is an example of element selector
+            great for selecting multiple HTML elements with the same tag
+        */
+        p {
+            color: brown;
+        }
+
+        #box-model
+        {
+            margin: 40px;
+
+            border: solid black 5px;
+
+            padding: 40px;
+
+            text-align: center;
+        }
+
+        .box {
+            border: 2px solid black;
+            border-radius: 10px;
+            
+            text-align: center;
+            padding: 10%;
+
+            box-shadow: rgb(0, 0, 0, 0.35) 5px 10px 10px;
+        }
+
+        .grid {
+            display: grid; /* It will tell css that you are starting a grid */
+            
+            grid-template-columns: repeat(3, 1fr); /* CSS Grid will auto create more rows if necessary */
+            grid-template-rows: 1fr 1fr;
+
+            gap: 20px;
+            margin: 5%;
+        }
+
+        .box-expand-row {
+            grid-row: span 2;
+        }
+
+        .box-expand-column {
+            grid-column: span 2;
+        }
+
+        /* Must have css selector with animation property */
+        .animate {
+            animation: fade-in-fade-out 5s;
+            opacity: 0;
+        }
+
+        /* Simple animation css */
+        @keyframes fade-in-fade-out {
+            /* The percentage dictate at what time it should have styling wise */
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+    
+</head>
+
+<!-- Body element it contains the content that we want to display in our browser -->
+<!-- you need the body tag to refer to the body element -->
+<body>
+    
+    <!-- heading element used to display title or subheading (from h1 to h6) -->
+    <h1>Welcome to HTML</h1>
+    <h6>Another heading</h6>
+
+    <!-- Div elements just the way to group things together and it is used for organization-->
+    <div>
+        Divs are generic blocks element that is used to separate visual aspects of your browser
+    
+        <!-- Paragraph element is just a bunch text you want to display in your website -->
+        <p>I'm just a paragraph</p>
+        <div>
+            You can have nested divs
+        </div>
+    </div>
+
+    <!-- This groups your span content together -->
+    <div>
+        <h3>Span Element</h3>
+        <span>Span is used to create inline elements</span>
+        <span>THIS IS ANOTHER SPAN</span>
+    </div>
+    
+    <!-- Image element -->
+    <!-- Self closing tag, certain elements doesn't have the capability to group things together -->
+    <!-- HTML attribute, they are extra information we can supply to a element to change/add more information for the element -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Bach_BWV_22_manuscript_Kuhnau.jpg" />
+
+    <!-- Article element, grouping this elements will be used to display an article -->
+    <!-- HTML Semantic elements, it is like a div in which it groups things together but it is self descriptive -->
+    <article>
+        <header>
+            a semantic element that is used to group a bunch of navigational links
+        </header>
+        <h3>This is some article section</h3>
+        <p>paragraph 1</p>
+        <p>paragraph 2</p>
+        <p>paragraph 3</p>
+    </article>
+
+    <!-- Table element used to group html elements that forms a table -->
+    <table>
+        <!-- Represents a table row -->
+        <tr>
+            <!-- Represents a table heading -->
+            <th>Name</th>
+            <th>Level</th>
+            <th>Health</th>
+        </tr>
+        <!-- Anything after the first tr will represent the next row of the table -->
+        <tr>
+            <!-- Represents table data -->
+            <td>Pikachu</td>
+            <td>45</td>
+            <td>120</td>
+        </tr>
+        <tr>
+            <td>Ditto</td>
+            <td>20</td>
+            <td>23</td>
+        </tr>
+    </table>
+
+    <!-- Hyperlink element are great for redirecting the user to another HTML page -->
+    <div>
+        <h3>Hyperlinks</h3>
+        <p>They are used to navigate through your website</p>
+        <a href="https://www.google.com/">Go To Google</a>
+    </div>
+
+    <!-- List element are great for display a list -->
+    <div>
+        <h3>List Section</h3>
+        <h4>Ordered List</h4>
+        <ol>
+            <li>denoted by ol</li>
+            <li>The sequence in which you put information matters</li>
+            <li>Ex: recipe list</li>
+            <ul>
+                <li>Unordered list is when order doesn't matter</li>
+                <li>You can also add a combination between ordered and unordered list</li>
+            </ul>
+        </ol>
+
+        <ul>
+            <li>Another section of lists</li>
+        </ul>
+    </div>
+
+    <h1>Introduction to CSS</h1>
+
+    <div>
+        <p id="add-red" style="color:pink;" class="add-blue">This is an example of id selector</p>
+        <p class="add-blue make-big">This is an example of class selector</p>
+        <p class="add-blue">This is an example of class selector</p>
+        <p class="add-blue" style="color:pink;">This is an example of class selector</p>
+        <p>This is an example of element selector</p>
+        <p style="color:pink;">This is an example of inline css</p>
+        <p class="make-big">This is an example of external css</p>
+    </div>
+
+    <h3 id="box-model">Box model</h3>
+
+    <h3>CSS Grid</h3>
+
+    <div class="grid">
+        <div class="box box-expand-column flex">Header</div>
+        <div class="box">box 2</div>
+        <div class="box-expand-row box">box 3</div>
+        <div class="box box-expand-column">box 4</div>
+        <div class="box box-expand-column">box 5</div>
+    </div>
+
+    <div class="animate">Animations</div>
+</body>
+
+</html>
